@@ -1,60 +1,102 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:recommended",
+    ":dependencyDashboard",
+    ":semanticCommits",
+    ":separatePatchReleases"
   ],
-  "packageManager": "pnpm@10.11.1",
-  "schedule": ["before 3am on monday"],
+  "rangeStrategy": "bump",
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchCurrentVersion": "!/^0/",
-      "automerge": true
+      "description": "Group React ecosystem updates",
+      "groupName": "React ecosystem",
+      "matchPackageNames": ["react", "react-dom", "/^@types\\/react/"],
+      "automerge": false,
+      "schedule": ["before 10am on monday"]
     },
     {
-      "matchDepTypes": ["devDependencies"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "automerge": true
-    },
-    {
-      "matchPackagePatterns": ["^@rainbow-me/", "^wagmi$", "^viem$"],
-      "groupName": "web3 dependencies",
-      "groupSlug": "web3-deps"
-    },
-    {
-      "matchPackagePatterns": ["^@types/"],
-      "groupName": "TypeScript type definitions",
-      "groupSlug": "typescript-types"
-    },
-    {
-      "matchPackagePatterns": ["^react$", "^react-dom$"],
-      "groupName": "React core",
-      "groupSlug": "react-core"
-    },
-    {
-      "matchPackagePatterns": ["^next$", "^@next/"],
+      "description": "Group Next.js updates",
       "groupName": "Next.js",
-      "groupSlug": "nextjs"
+      "matchPackageNames": ["next", "/^eslint-config-next/"],
+      "automerge": false,
+      "schedule": ["before 10am on monday"]
     },
     {
-      "matchPackagePatterns": ["^hardhat$", "^@nomicfoundation/"],
+      "description": "Group Web3 updates",
+      "groupName": "Web3",
+      "matchPackageNames": ["^@rainbow-me/", "^wagmi$", "^viem$"],
+      "automerge": false,
+      "schedule": ["before 10am on monday"]
+    },
+    {
+      "description": "Group Hardhat updates",
       "groupName": "Hardhat",
-      "groupSlug": "hardhat"
+      "matchPackageNames": ["^hardhat$", "^@nomicfoundation/"],
+      "automerge": true,
+      "automergeType": "pr",
+      "schedule": ["before 10am on monday"]
+    },
+    {
+      "description": "Group TypeScript ecosystem",
+      "groupName": "TypeScript",
+      "matchPackageNames": [
+        "typescript",
+        "/^@types\\//",
+        "/^typescript-eslint/"
+      ],
+      "automerge": true,
+      "automergeType": "pr",
+      "schedule": ["before 10am on monday"]
+    },
+    {
+      "description": "Group ESLint ecosystem",
+      "groupName": "ESLint",
+      "matchPackageNames": ["eslint", "/^eslint-/", "/^@eslint\\//"],
+      "automerge": true,
+      "automergeType": "pr",
+      "schedule": ["before 10am on monday"]
+    },
+    {
+      "description": "Group build tools",
+      "groupName": "Build tools",
+      "matchPackageNames": [
+        "turbo",
+        "prettier",
+        "/^@tailwindcss\\//",
+        "/^tailwindcss/"
+      ],
+      "automerge": true,
+      "automergeType": "pr",
+      "schedule": ["before 10am on monday"]
+    },
+    {
+      "description": "Auto-merge patch and minor updates for utility packages",
+      "groupName": "Utilities",
+      "matchPackageNames": [
+        "clsx",
+        "class-variance-authority",
+        "tailwind-merge",
+        "lucide-react"
+      ],
+      "automerge": true,
+      "automergeType": "pr",
+      "matchUpdateTypes": ["patch", "minor"]
     }
   ],
+  "schedule": ["before 10am on monday"],
+  "timezone": "UTC",
   "labels": ["dependencies"],
-  "commitMessageAction": "Update",
+  "assignees": ["zhyd1997"],
+  "reviewers": ["zhyd1997"],
+  "prConcurrentLimit": 10,
+  "prHourlyLimit": 2,
+  "commitMessagePrefix": "chore(deps):",
+  "commitMessageAction": "update",
   "commitMessageTopic": "{{depName}}",
   "commitMessageExtra": "to {{newVersion}}",
-  "repositories": ["."],
-  "rangeStrategy": "bump",
-  "bumpVersion": "patch",
-  "prHourlyLimit": 2,
-  "prConcurrentLimit": 10,
-  "onboarding": true,
-  "requireConfig": true,
-  "dependencyDashboard": true,
-  "dependencyDashboardTitle": "Dependency Updates Dashboard",
-  "ignoreDeps": ["typescript"],
-  "postUpdateOptions": ["pnpmDedupe"]
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 10am on monday"]
+  }
 }
