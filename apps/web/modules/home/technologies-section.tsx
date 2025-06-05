@@ -18,7 +18,7 @@ export const TechnologiesSection: FC<TechnologiesSectionProps> = (props) => {
           Built with the latest and greatest technologies for Web3 development.
         </p>
       </div>
-      <div className="mx-auto grid justify-center gap-4 px-4 sm:grid-cols-2 lg:grid-cols-3 md:max-w-[64rem]">
+      <div className="mx-auto grid justify-center gap-4 px-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:max-w-[64rem]">
         <TechCard
           title="wagmi"
           description="React Hooks for Ethereum - wallet connection, contract interactions, and more"
