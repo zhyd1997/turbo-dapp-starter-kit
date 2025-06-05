@@ -5,7 +5,7 @@
 ## Frontend
 
 - UI
-  - Nextjs v15
+  - Next.js v15
   - Tailwind CSS v4
   - shadcn/ui
 - Wallet
