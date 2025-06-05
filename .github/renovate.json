@@ -1,0 +1,60 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "packageManager": "pnpm@10.11.1",
+  "schedule": ["before 3am on monday"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    },
+    {
+      "matchPackagePatterns": ["^@rainbow-me/", "^wagmi$", "^viem$"],
+      "groupName": "web3 dependencies",
+      "groupSlug": "web3-deps"
+    },
+    {
+      "matchPackagePatterns": ["^@types/"],
+      "groupName": "TypeScript type definitions",
+      "groupSlug": "typescript-types"
+    },
+    {
+      "matchPackagePatterns": ["^react$", "^react-dom$"],
+      "groupName": "React core",
+      "groupSlug": "react-core"
+    },
+    {
+      "matchPackagePatterns": ["^next$", "^@next/"],
+      "groupName": "Next.js",
+      "groupSlug": "nextjs"
+    },
+    {
+      "matchPackagePatterns": ["^hardhat$", "^@nomicfoundation/"],
+      "groupName": "Hardhat",
+      "groupSlug": "hardhat"
+    }
+  ],
+  "labels": ["dependencies"],
+  "commitMessageAction": "Update",
+  "commitMessageTopic": "{{depName}}",
+  "commitMessageExtra": "to {{newVersion}}",
+  "repositories": ["."],
+  "rangeStrategy": "bump",
+  "bumpVersion": "patch",
+  "prHourlyLimit": 2,
+  "prConcurrentLimit": 10,
+  "onboarding": true,
+  "requireConfig": true,
+  "dependencyDashboard": true,
+  "dependencyDashboardTitle": "Dependency Updates Dashboard",
+  "ignoreDeps": ["typescript"],
+  "postUpdateOptions": ["pnpmDedupe"]
+}
