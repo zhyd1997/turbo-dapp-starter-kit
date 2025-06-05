@@ -1,4 +1,6 @@
-# turbo-dapp-starter-kit
+# Turbo DApp Starter Kit
+
+![demo](https://ik.imagekit.io/1winv85cn8g/turbo-dapp-starter-kit/demo@2x_GuIsszikC.png)
 
 ## Frontend
 
