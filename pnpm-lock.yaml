@@ -64,8 +64,8 @@ importers:
         version: 2.15.5(@tanstack/query-core@5.80.5)(@tanstack/react-query@5.80.5(react@19.0.0))(@types/react@19.0.10)(bufferutil@4.0.9)(immer@10.0.2)(react@19.0.0)(typescript@5.7.3)(utf-8-validate@5.0.10)(viem@2.30.6(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.24.2))(zod@3.24.2)
     devDependencies:
       '@types/node':
-        specifier: ^20
-        version: 20.17.19
+        specifier: ^22.0.0
+        version: 22.7.5
       '@types/react':
         specifier: ^19
         version: 19.0.10
@@ -185,10 +185,10 @@ importers:
         version: 4.0.8
       '@turbo/gen':
         specifier: ^2.4.2
-        version: 2.4.2(@types/node@20.17.19)(typescript@5.7.3)
+        version: 2.4.2(@types/node@22.7.5)(typescript@5.7.3)
       '@types/node':
-        specifier: ^20
-        version: 20.17.19
+        specifier: ^22.0.0
+        version: 22.7.5
       '@types/react':
         specifier: ^19
         version: 19.0.10
@@ -1490,9 +1490,6 @@ packages:
 
   '@types/node@10.17.60':
     resolution: {integrity: sha512-F0KIgDJfy2nA3zMLmWGKxcH2ZVEtCZXHHdOQs2gSaQ27+lNeEfGxzkIw90aXswATX7AZ33tahPbzy6KAfUreVw==}
-
-  '@types/node@20.17.19':
-    resolution: {integrity: sha512-LEwC7o1ifqg/6r2gn9Dns0f1rhK+fPFDoMiceTJ6kWmVk6bgXBI/9IOWfVan4WiAavK9pIVWdX0/e3J+eEUh5A==}
 
   '@types/node@22.7.5':
     resolution: {integrity: sha512-jML7s2NAzMWc//QSJ1a3prpk78cOPchGvXJsC3C6R6PSMoooztvRVQEz89gmBTBY1SPMaqo5teB4uNHPdetShQ==}
@@ -6959,7 +6956,7 @@ snapshots:
 
   '@tsconfig/node16@1.0.4': {}
 
-  '@turbo/gen@2.4.2(@types/node@20.17.19)(typescript@5.7.3)':
+  '@turbo/gen@2.4.2(@types/node@22.7.5)(typescript@5.7.3)':
     dependencies:
       '@turbo/workspaces': 2.4.2
       commander: 10.0.1
@@ -6969,7 +6966,7 @@ snapshots:
       node-plop: 0.26.3
       picocolors: 1.0.1
       proxy-agent: 6.5.0
-      ts-node: 10.9.2(@types/node@20.17.19)(typescript@5.7.3)
+      ts-node: 10.9.2(@types/node@22.7.5)(typescript@5.7.3)
       update-check: 1.5.4
       validate-npm-package-name: 5.0.1
     transitivePeerDependencies:
@@ -7011,7 +7008,7 @@ snapshots:
 
   '@types/bn.js@5.1.6':
     dependencies:
-      '@types/node': 20.17.19
+      '@types/node': 22.7.5
 
   '@types/chai-as-promised@7.1.8':
     dependencies:
@@ -7021,7 +7018,7 @@ snapshots:
 
   '@types/concat-stream@1.6.1':
     dependencies:
-      '@types/node': 20.17.19
+      '@types/node': 22.7.5
 
   '@types/debug@4.1.12':
     dependencies:
@@ -7031,12 +7028,12 @@ snapshots:
 
   '@types/form-data@0.0.33':
     dependencies:
-      '@types/node': 20.17.19
+      '@types/node': 22.7.5
 
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 20.17.19
+      '@types/node': 22.7.5
 
   '@types/inquirer@6.5.0':
     dependencies:
@@ -7055,10 +7052,6 @@ snapshots:
 
   '@types/node@10.17.60': {}
 
-  '@types/node@20.17.19':
-    dependencies:
-      undici-types: 6.19.8
-
   '@types/node@22.7.5':
     dependencies:
       undici-types: 6.19.8
@@ -7067,7 +7060,7 @@ snapshots:
 
   '@types/pbkdf2@3.1.2':
     dependencies:
-      '@types/node': 20.17.19
+      '@types/node': 22.7.5
 
   '@types/prettier@2.7.3': {}
 
@@ -7083,11 +7076,11 @@ snapshots:
 
   '@types/secp256k1@4.0.6':
     dependencies:
-      '@types/node': 20.17.19
+      '@types/node': 22.7.5
 
   '@types/through@0.0.33':
     dependencies:
-      '@types/node': 20.17.19
+      '@types/node': 22.7.5
 
   '@types/tinycolor2@1.4.6': {}
 
@@ -11308,14 +11301,14 @@ snapshots:
     dependencies:
       typescript: 5.8.3
 
-  ts-node@10.9.2(@types/node@20.17.19)(typescript@5.7.3):
+  ts-node@10.9.2(@types/node@22.7.5)(typescript@5.7.3):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.17.19
+      '@types/node': 22.7.5
       acorn: 8.14.0
       acorn-walk: 8.3.4
       arg: 4.1.3
