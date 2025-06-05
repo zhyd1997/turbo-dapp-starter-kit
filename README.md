@@ -4,16 +4,15 @@
 
 ## Frontend
 
-- Nextjs v15
-- Tailwind CSS v4
-- shadcn/ui
+- UI
+  - Nextjs v15
+  - Tailwind CSS v4
+  - shadcn/ui
+- Wallet
+  - wagmi
+  - rainbowkit
 
-## Wallet
-
-- wagmi
-- rainbowkit
-
-# Contracts
+## Contracts
 
 - Hardhat
 - Solidity
