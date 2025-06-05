@@ -2,6 +2,17 @@
   "name": "turbo-dapp-starter-kit",
   "version": "0.0.1",
   "private": true,
+  "keywords": [
+    "web3",
+    "dapp",
+    "turbo",
+    "tailwind css",
+    "shadcn/ui",
+    "hardhat",
+    "etherjs",
+    "wagmi",
+    "rainbowkit"
+  ],
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
