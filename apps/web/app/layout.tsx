@@ -1,7 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google"
 
+import type { Metadata } from "next"
+
 import "@workspace/ui/globals.css"
 import { Providers } from "@/components/providers"
+
+import '@rainbow-me/rainbowkit/styles.css';
 
 const fontSans = Geist({
   subsets: ["latin"],
@@ -12,6 +16,11 @@ const fontMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
 })
+
+export const metadata: Metadata = {
+  title: 'Turbo DApp Starter Kit',
+  description: '',
+}
 
 export default function RootLayout({
   children,
