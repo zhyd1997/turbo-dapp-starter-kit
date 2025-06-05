@@ -5,6 +5,8 @@ import type { Metadata } from "next"
 import "@workspace/ui/globals.css"
 import { Providers } from "@/components/providers"
 
+import {NavBar} from "@/components/nav-bar";
+
 import '@rainbow-me/rainbowkit/styles.css';
 
 const fontSans = Geist({
@@ -32,7 +34,11 @@ export default function RootLayout({
       <body
         className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased `}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+            <NavBar />
+
+            {children}
+        </Providers>
       </body>
     </html>
   )
