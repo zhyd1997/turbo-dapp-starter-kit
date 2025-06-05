@@ -4356,6 +4356,11 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  semver@7.7.2:
+    resolution: {integrity: sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   sentence-case@2.1.1:
     resolution: {integrity: sha512-ENl7cYHaK/Ktwk5OTD+aDbQ3uC8IByu/6Bkg+HDv8Mm+XnBnppVNalcfJTNsp1ibstKh030/JKQQWglDvtKwEQ==}
 
@@ -5905,7 +5910,7 @@ snapshots:
       '@ethereumjs/tx': 4.2.0
       '@types/debug': 4.1.12
       debug: 4.4.1
-      semver: 7.7.1
+      semver: 7.7.2
       superstruct: 1.0.4
     transitivePeerDependencies:
       - supports-color
@@ -7016,7 +7021,7 @@ snapshots:
 
   '@types/concat-stream@1.6.1':
     dependencies:
-      '@types/node': 20.17.19
+      '@types/node': 22.7.5
 
   '@types/debug@4.1.12':
     dependencies:
@@ -7026,7 +7031,7 @@ snapshots:
 
   '@types/form-data@0.0.33':
     dependencies:
-      '@types/node': 20.17.19
+      '@types/node': 22.7.5
 
   '@types/glob@7.2.0':
     dependencies:
@@ -7062,7 +7067,7 @@ snapshots:
 
   '@types/pbkdf2@3.1.2':
     dependencies:
-      '@types/node': 20.17.19
+      '@types/node': 22.7.5
 
   '@types/prettier@2.7.3': {}
 
@@ -7078,7 +7083,7 @@ snapshots:
 
   '@types/secp256k1@4.0.6':
     dependencies:
-      '@types/node': 20.17.19
+      '@types/node': 22.7.5
 
   '@types/through@0.0.33':
     dependencies:
@@ -10822,6 +10827,8 @@ snapshots:
 
   semver@7.7.1: {}
 
+  semver@7.7.2: {}
+
   sentence-case@2.1.1:
     dependencies:
       no-case: 2.3.2
@@ -11033,7 +11040,7 @@ snapshots:
       pify: 4.0.1
       recursive-readdir: 2.2.3
       sc-istanbul: 0.4.6
-      semver: 7.7.1
+      semver: 7.7.2
       shelljs: 0.8.5
       web3-utils: 1.10.4
 
