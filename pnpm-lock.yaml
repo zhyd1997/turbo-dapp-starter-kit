@@ -169,7 +169,7 @@ importers:
         specifier: ^9.28.0
         version: 9.28.0(jiti@2.4.2)
       eslint-config-prettier:
-        specifier: ^10.0.3
+        specifier: ^10.1.5
         version: 10.1.5(eslint@9.28.0(jiti@2.4.2))
       eslint-plugin-only-warn:
         specifier: ^1.1.0
@@ -181,7 +181,7 @@ importers:
         specifier: ^5.2.0
         version: 5.2.0(eslint@9.28.0(jiti@2.4.2))
       eslint-plugin-turbo:
-        specifier: ^2.4.4
+        specifier: ^2.5.4
         version: 2.5.4(eslint@9.28.0(jiti@2.4.2))(turbo@2.5.4)
       globals:
         specifier: ^16.2.0
