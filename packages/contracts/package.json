@@ -6,7 +6,9 @@
   "scripts": {
     "compile": "hardhat compile",
     "test": "hardhat test",
-    "dev": "hardhat node && hardhat ignition deploy ./ignition/modules/Lock.ts --network localhost"
+    "start": "hardhat node",
+    "deploy:local": "hardhat ignition deploy ./ignition/modules/Lock.ts --network localhost",
+    "dev": "concurrently --raw --success=first -k \"pnpm start\" \"sh -c 'sleep 3 && pnpm deploy:local && tail -f /dev/null'\""
   },
   "keywords": [],
   "author": "",
@@ -26,6 +28,7 @@
     "@types/mocha": "^10.0.10",
     "@types/node": "^22.15.30",
     "chai": "^4.5.0",
+    "concurrently": "^9.1.2",
     "ethers": "^6.14.3",
     "hardhat": "^2.24.2",
     "hardhat-gas-reporter": "^1.0.10",
