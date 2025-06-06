@@ -15,3 +15,4 @@ npx hardhat ignition deploy ./ignition/modules/Lock.ts
 # TODO
 
 [Upgradeable Contracts](https://hardhat.org/ignition/docs/guides/upgradeable-proxies)
+[Using with Hardhat](https://docs.openzeppelin.com/upgrades-plugins/hardhat-upgrades)
