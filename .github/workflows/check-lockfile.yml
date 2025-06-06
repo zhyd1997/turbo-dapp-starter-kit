@@ -26,6 +26,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run:
-          pnpm install --frozen-lockfile --strict-peer-dependencies |
-          pnpm add -D eslint -w
+        run: pnpm install --frozen-lockfile --strict-peer-dependencies
+
+      - name: Check for peer dependency warnings
+        run: pnpm add -D eslint -w
