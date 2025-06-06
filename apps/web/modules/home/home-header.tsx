@@ -5,6 +5,7 @@ import { Github, Package } from "lucide-react";
 import { MobileNav } from "@/components/mobile-nav";
 import { ModeToggle } from "@/components/mode-toggle";
 import { SECTION_KEY } from "@/modules/home/constants/sections";
+import { APP_INFO } from "@/config/app";
 
 export type HomeHeaderProps = {};
 
@@ -16,7 +17,7 @@ export const HomeHeader: FC<HomeHeaderProps> = (props) => {
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Package className="h-6 w-6" />
             <span className="hidden font-bold sm:inline-block">
-              Turbo DApp Starter Kit
+              {APP_INFO.NAME}
             </span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
@@ -65,7 +66,7 @@ export const HomeHeader: FC<HomeHeaderProps> = (props) => {
               asChild
               className="hidden sm:flex"
             >
-              <Link href="https://git.new/turbo-dapp-starter-kit">
+              <Link href={APP_INFO.GIT_REPO}>
                 <Github className="h-[1.2rem] w-[1.2rem]" />
                 <span className="sr-only">GitHub</span>
               </Link>

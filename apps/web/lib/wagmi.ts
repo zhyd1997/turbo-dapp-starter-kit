@@ -3,6 +3,7 @@ import type { Config } from "wagmi";
 import { hardhat, mainnet } from "wagmi/chains";
 import { createClient } from "viem";
 import { getDefaultConfig } from "@rainbow-me/rainbowkit";
+import { APP_INFO } from "@/config/app";
 
 export const hardHatConfig = createConfig({
   chains: [hardhat],
@@ -15,7 +16,7 @@ export const hardHatConfig = createConfig({
 
 export const config: Config = getDefaultConfig({
   chains: [mainnet],
-  appName: "Turbo DApp Starter Kit",
+  appName: APP_INFO.NAME,
   projectId: process.env.NEXT_PUBLIC_PROJECT_ID!,
   ssr: true,
 });
