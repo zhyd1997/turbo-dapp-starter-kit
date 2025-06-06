@@ -19,7 +19,7 @@
     "react-dom": "^19.1.0",
     "tailwind-merge": "^3.0.2",
     "tw-animate-css": "^1.3.4",
-    "zod": "^3.25.53"
+    "zod": "^3.25.54"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.17",
