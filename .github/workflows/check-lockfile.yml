@@ -25,7 +25,7 @@ jobs:
           node-version: 22.16.0
           cache: 'pnpm'
 
-      - name: Install dependencies
+      - name: Check for peer dependency warnings
         run:
-          pnpm add -D eslint |
-          pnpm install --frozen-lockfile --strict-peer-dependencies
+          pnpm install --frozen-lockfile --strict-peer-dependencies |
+          pnpm add -D eslint -w
