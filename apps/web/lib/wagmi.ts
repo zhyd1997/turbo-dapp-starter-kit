@@ -9,7 +9,9 @@ export const hardHatConfig = createConfig({
   chains: [hardhat],
   connectors: [injected()],
   client({ chain }) {
-    return createClient({ chain, transport: http("http://127.0.0.1:8545") });
+    // https://wagmi.sh/react/api/transports/http#url
+    // Defaults to `chain.rpcUrls.default.http[0]` - http://127.0.0.1:8545
+    return createClient({ chain, transport: http() });
   },
   ssr: true,
 });
