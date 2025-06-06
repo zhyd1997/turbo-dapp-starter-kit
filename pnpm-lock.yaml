@@ -67,10 +67,10 @@ importers:
         specifier: ^22.15.30
         version: 22.15.30
       '@types/react':
-        specifier: ^19.0.14
+        specifier: ^19.1.6
         version: 19.1.6
       '@types/react-dom':
-        specifier: ^19.0.6
+        specifier: ^19.1.6
         version: 19.1.6(@types/react@19.1.6)
       '@workspace/eslint-config':
         specifier: workspace:^
@@ -247,10 +247,10 @@ importers:
         specifier: ^22.15.30
         version: 22.15.30
       '@types/react':
-        specifier: ^19.0.14
+        specifier: ^19.1.6
         version: 19.1.6
       '@types/react-dom':
-        specifier: ^19.0.6
+        specifier: ^19.1.6
         version: 19.1.6(@types/react@19.1.6)
       '@workspace/eslint-config':
         specifier: workspace:*
