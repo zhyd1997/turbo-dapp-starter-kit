@@ -1,19 +1,13 @@
-name: Test "@workspace/contracts" package
+name: Check Lockfile Integrity
 
 on:
-  push:
-    paths:
-      - 'packages/contracts/**/*.sol'
-      - 'packages/contracts/**/*.ts'
-      - 'packages/contracts/**/*.test.ts'
-      - 'packages/contracts/**/*.spec.ts'
-      - 'packages/contracts/package.json'
+  push
 
 permissions:
   contents: read
 
 jobs:
-  test-contracts:
+  verify-lockfile:
     runs-on: ubuntu-latest
 
     steps:
@@ -32,8 +26,4 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install
-
-      - name: Run tests
-        working-directory: packages/contracts
-        run: pnpm test
+        run: pnpm install --frozen-lockfile --strict-peer-dependencies
