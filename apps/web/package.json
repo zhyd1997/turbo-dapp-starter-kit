@@ -25,11 +25,11 @@
   },
   "devDependencies": {
     "@types/node": "^22.15.30",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "^19.0.14",
+    "@types/react-dom": "^19.0.6",
     "@workspace/eslint-config": "workspace:^",
     "@workspace/typescript-config": "workspace:*",
     "eslint": "^9.28.0",
-    "typescript": "^5.7.3"
+    "typescript": "^5.8.3"
   }
 }
