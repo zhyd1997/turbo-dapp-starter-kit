@@ -24,7 +24,7 @@
     "@nomicfoundation/hardhat-verify": "^2.0.14",
     "@typechain/ethers-v6": "^0.5.1",
     "@typechain/hardhat": "^9.1.0",
-    "@types/chai": "^4.3.20",
+    "@types/chai": "^5.2.2",
     "@types/mocha": "^10.0.10",
     "@types/node": "^22.15.30",
     "chai": "^4.5.0",
