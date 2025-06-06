@@ -79,7 +79,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/typescript-config
       eslint:
-        specifier: ^9.20.1
+        specifier: ^9.28.0
         version: 9.28.0(jiti@2.4.2)
       typescript:
         specifier: ^5.7.3
@@ -166,22 +166,22 @@ importers:
         specifier: ^8.24.1
         version: 8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3)
       eslint:
-        specifier: ^9.20.1
+        specifier: ^9.28.0
         version: 9.28.0(jiti@2.4.2)
       eslint-config-prettier:
-        specifier: ^10.0.0
+        specifier: ^10.0.3
         version: 10.1.5(eslint@9.28.0(jiti@2.4.2))
       eslint-plugin-only-warn:
         specifier: ^1.1.0
         version: 1.1.0
       eslint-plugin-react:
-        specifier: ^7.37.4
+        specifier: ^7.37.5
         version: 7.37.5(eslint@9.28.0(jiti@2.4.2))
       eslint-plugin-react-hooks:
-        specifier: ^5.1.0
+        specifier: ^5.2.0
         version: 5.2.0(eslint@9.28.0(jiti@2.4.2))
       eslint-plugin-turbo:
-        specifier: ^2.4.2
+        specifier: ^2.4.4
         version: 2.5.4(eslint@9.28.0(jiti@2.4.2))(turbo@2.5.4)
       globals:
         specifier: ^16.2.0
