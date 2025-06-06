@@ -1535,9 +1535,6 @@ packages:
       hardhat: ^2.9.9
       typechain: ^8.3.2
 
-  '@types/bn.js@5.1.6':
-    resolution: {integrity: sha512-Xh8vSwUeMKeYYrj3cX4lGQgFSF/N03r+tv4AiLl1SucqV+uTQpxRcnM8AkXKHwYP9ZPXOYXRr2KPXpVlIvqh9w==}
-
   '@types/bn.js@5.2.0':
     resolution: {integrity: sha512-DLbJ1BPqxvQhIGbeu8VbUC1DiAiahHtAYvA0ZEAa4P31F7IaArc8z3C3BRQdWX4mtLQuABG4yzp76ZrS02Ui1Q==}
 
@@ -7184,10 +7181,6 @@ snapshots:
       hardhat: 2.24.2(bufferutil@4.0.9)(ts-node@10.9.2(@types/node@22.15.30)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10)
       typechain: 8.3.2(typescript@5.8.3)
 
-  '@types/bn.js@5.1.6':
-    dependencies:
-      '@types/node': 22.15.30
-
   '@types/bn.js@5.2.0':
     dependencies:
       '@types/node': 22.15.30
@@ -9544,7 +9537,7 @@ snapshots:
       '@nomicfoundation/edr': 0.11.0
       '@nomicfoundation/solidity-analyzer': 0.1.2
       '@sentry/node': 5.30.0
-      '@types/bn.js': 5.1.6
+      '@types/bn.js': 5.2.0
       '@types/lru-cache': 5.1.1
       adm-zip: 0.4.16
       aggregate-error: 3.1.0
@@ -10525,8 +10518,8 @@ snapshots:
       '@adraffy/ens-normalize': 1.11.0
       '@noble/curves': 1.9.2
       '@noble/hashes': 1.8.0
-      '@scure/bip32': 1.6.2
-      '@scure/bip39': 1.5.4
+      '@scure/bip32': 1.7.0
+      '@scure/bip39': 1.6.0
       abitype: 1.0.8(typescript@5.8.3)(zod@3.25.53)
       eventemitter3: 5.0.1
     optionalDependencies:
