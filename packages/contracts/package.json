@@ -1,5 +1,5 @@
 {
-  "name": "contracts",
+  "name": "@workspace/contracts",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "packageManager": "pnpm@10.11.1",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
