@@ -1,0 +1,43 @@
+// ./hooks/contracts/useLock.ts
+import { useReadContract, useWriteContract } from 'wagmi';
+import { abi as lockAbi } from "@workspace/contracts/artifacts/contracts/Lock.sol/Lock.json"
+// import deployedAddresses from "@workspace/contracts/ignition/deployments/chain-31337/deployed_addresses.json"
+
+export const useContractModuleName = () => {
+  const contractAddress = deployedAddresses['LockModule#Lock'] as `0x${string}` // '0x...';
+
+  const { data: unlockTime } = useReadContract({
+    address: contractAddress,
+    abi: lockAbi,
+    functionName: 'unlockTime',
+    // chainId: hardhat.id
+  });
+
+  const { write: mint } = useWriteContract({
+    address: contractAddress,
+    abi: lockAbi,
+    functionName: 'mint',
+    // chainId: hardhat.id
+  });
+
+  return { unlockTime, mint }
+}
+
+// ./modules/contracts/contract-module-name-panel.tsx
+import { useLock } from "@/hooks/contracts/useLock"
+
+export const ContractModuleNamePanel = () => {
+  const { unlockTime, mint } = useLock()
+
+  return (
+    <div className="space-y-4">
+      <div>Unlock Time: {unlockTime}</div>
+      <button
+        onClick={() => mint({ args: [1] })}
+        className="px-4 py-2 bg-primary text-primary-foreground rounded-md"
+      >
+        Mint Token
+      </button>
+    </div>
+  );
+}

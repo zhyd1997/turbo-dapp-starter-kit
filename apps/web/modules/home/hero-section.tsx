@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { Badge } from "@workspace/ui/components/badge";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+// import {LockPanel} from "@/modules/contracts/lock/lock-panel";
 
 export type HeroSectionProps = {};
 
@@ -22,8 +23,11 @@ export const HeroSection: FC<HeroSectionProps> = (props) => {
           applications with Next.js 15, wagmi, RainbowKit, Hardhat, Tailwind CSS
           v4, and shadcn/ui.
         </p>
-        <div className="flex">
+        <div className="flex flex-col gap-2 items-center">
           <ConnectButton />
+
+          {/* FIXME: UNCOMMENT IT TO MAKE IT WORK */}
+          {/*<LockPanel />*/}
         </div>
       </div>
     </section>

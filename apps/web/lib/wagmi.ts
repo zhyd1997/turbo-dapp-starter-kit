@@ -5,6 +5,7 @@ import { createClient } from "viem";
 import { getDefaultConfig } from "@rainbow-me/rainbowkit";
 import { APP_INFO } from "@/config/app";
 
+// Only for local development
 export const hardHatConfig = createConfig({
   chains: [hardhat],
   connectors: [injected()],
@@ -16,9 +17,13 @@ export const hardHatConfig = createConfig({
   ssr: true,
 });
 
+// Both for prod and dev mode
 export const config: Config = getDefaultConfig({
-  chains: [mainnet],
+  chains: [mainnet, hardhat],
   appName: APP_INFO.NAME,
   projectId: process.env.NEXT_PUBLIC_PROJECT_ID!,
   ssr: true,
+  transports: {
+    [hardhat.id]: http(),
+  },
 });

@@ -8,6 +8,33 @@ import {
 import { CodeBlock } from "@/modules/home/code-block";
 import { SECTION_KEY } from "@/modules/home/constants/sections";
 
+import { readFileSync } from "fs";
+import path from "path";
+
+const connectSnippetFilePath = path.join(
+  process.cwd(),
+  "modules/home/constants/examples/connect-snippet.txt",
+);
+const CONNECT_JSX_CODE = readFileSync(connectSnippetFilePath, "utf8");
+
+const contractSnippetFilePath = path.join(
+  process.cwd(),
+  "modules/home/constants/examples/contract-snippet.txt",
+);
+const CONTRACT_JSX_CODE = readFileSync(contractSnippetFilePath, "utf8");
+
+const uiSnippetFilePath = path.join(
+  process.cwd(),
+  "modules/home/constants/examples/ui-snippet.txt",
+);
+const UI_JSX_CODE = readFileSync(uiSnippetFilePath, "utf8");
+
+const TABS = {
+  CONNECT: "connect",
+  CONTRACT: "contract",
+  UI: "ui",
+};
+
 export type ExamplesSectionProps = {};
 
 export const ExamplesSection: FC<ExamplesSectionProps> = (props) => {
@@ -25,101 +52,26 @@ export const ExamplesSection: FC<ExamplesSectionProps> = (props) => {
         </p>
       </div>
       <div className="mx-auto max-w-4xl pt-6 sm:pt-10">
-        <Tabs defaultValue="connect" className="w-full">
+        <Tabs defaultValue={TABS.CONNECT} className="w-full">
           <TabsList className="grid w-full grid-cols-1 sm:grid-cols-3 h-auto sm:h-10">
-            <TabsTrigger value="connect" className="text-xs sm:text-sm">
+            <TabsTrigger value={TABS.CONNECT} className="text-xs sm:text-sm">
               Wallet Connect
             </TabsTrigger>
-            <TabsTrigger value="contract" className="text-xs sm:text-sm">
+            <TabsTrigger value={TABS.CONTRACT} className="text-xs sm:text-sm">
               Contract Interaction
             </TabsTrigger>
-            <TabsTrigger value="ui" className="text-xs sm:text-sm">
+            <TabsTrigger value={TABS.UI} className="text-xs sm:text-sm">
               UI Components
             </TabsTrigger>
           </TabsList>
-          <TabsContent value="connect" className="mt-6 space-y-4">
-            <CodeBlock
-              code={`import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { useAccount } from 'wagmi';
-
-export function WalletConnect() {
-  const { address, isConnected } = useAccount();
-  
-  return (
-    <div className="flex flex-col items-center gap-4">
-      <ConnectButton />
-      
-      {isConnected && (
-        <div className="p-4 border rounded-lg">
-          Connected to {address}
-        </div>
-      )}
-    </div>
-  );
-}`}
-            />
+          <TabsContent value={TABS.CONNECT} className="mt-6 space-y-4">
+            <CodeBlock code={CONNECT_JSX_CODE} />
           </TabsContent>
-          <TabsContent value="contract" className="mt-6 space-y-4">
-            <CodeBlock
-              code={`import { useContractRead, useContractWrite } from 'wagmi';
-import { abi } from './MyContract.json';
-
-export function ContractInteraction() {
-  const contractAddress = '0x...';
-  
-  const { data: tokenName } = useContractRead({
-    address: contractAddress,
-    abi,
-    functionName: 'name',
-  });
-  
-  const { write: mint } = useContractWrite({
-    address: contractAddress,
-    abi,
-    functionName: 'mint',
-  });
-  
-  return (
-    <div className="space-y-4">
-      <div>Token Name: {tokenName}</div>
-      <button 
-        onClick={() => mint({ args: [1] })}
-        className="px-4 py-2 bg-primary text-primary-foreground rounded-md"
-      >
-        Mint Token
-      </button>
-    </div>
-  );
-}`}
-            />
+          <TabsContent value={TABS.CONTRACT} className="mt-6 space-y-4">
+            <CodeBlock code={CONTRACT_JSX_CODE} />
           </TabsContent>
-          <TabsContent value="ui" className="mt-6 space-y-4">
-            <CodeBlock
-              code={`import { Button } from "@workspace/ui/components/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@workspace/ui/components/card";
-import { ModeToggle } from "@/components/mode-toggle"
-
-export function DashboardCard() {
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="flex items-center justify-between">
-          Dashboard
-          <ThemeToggle />
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <p className="text-muted-foreground">
-          Your Web3 dashboard with dark mode support
-        </p>
-        <div className="mt-4">
-          <Button>View Details</Button>
-        </div>
-      </CardContent>
-    </Card>
-  );
-}`}
-            />
+          <TabsContent value={TABS.UI} className="mt-6 space-y-4">
+            <CodeBlock code={UI_JSX_CODE} />
           </TabsContent>
         </Tabs>
       </div>

@@ -1,0 +1,24 @@
+import { Button } from "@workspace/ui/components/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@workspace/ui/components/card";
+import { ModeToggle } from "@/components/mode-toggle"
+
+export const DashboardCard = () => {
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center justify-between">
+          Dashboard
+          <ThemeToggle />
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        <p className="text-muted-foreground">
+          Your Web3 dashboard with dark mode support
+        </p>
+        <div className="mt-4">
+          <Button>View Details</Button>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}

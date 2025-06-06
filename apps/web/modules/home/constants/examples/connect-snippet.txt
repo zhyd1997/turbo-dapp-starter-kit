@@ -1,0 +1,18 @@
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { useAccount } from 'wagmi';
+
+export function WalletConnect() {
+  const { address, isConnected } = useAccount();
+
+  return (
+    <div className="flex flex-col items-center gap-4">
+      <ConnectButton />
+
+      {isConnected && (
+        <div className="p-4 border rounded-lg">
+          Connected to {address}
+        </div>
+      )}
+    </div>
+  );
+}
