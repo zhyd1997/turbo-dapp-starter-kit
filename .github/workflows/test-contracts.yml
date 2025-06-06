@@ -4,6 +4,9 @@ on:
   push:
     paths:
       - 'packages/contracts/**/*.sol'
+      - 'packages/contracts/**/*.ts'
+      - 'packages/contracts/**/*.test.ts'
+      - 'packages/contracts/**/*.spec.ts'
       - 'packages/contracts/package.json'
 
 permissions:
