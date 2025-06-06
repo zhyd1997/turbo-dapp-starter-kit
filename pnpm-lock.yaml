@@ -67,10 +67,10 @@ importers:
         specifier: ^22.15.30
         version: 22.15.30
       '@types/react':
-        specifier: ^19
+        specifier: ^19.0.14
         version: 19.1.6
       '@types/react-dom':
-        specifier: ^19
+        specifier: ^19.0.6
         version: 19.1.6(@types/react@19.1.6)
       '@workspace/eslint-config':
         specifier: workspace:^
@@ -82,7 +82,7 @@ importers:
         specifier: ^9.28.0
         version: 9.28.0(jiti@2.4.2)
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
 
   packages/contracts:
@@ -187,10 +187,10 @@ importers:
         specifier: ^16.2.0
         version: 16.2.0
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
       typescript-eslint:
-        specifier: ^8.24.1
+        specifier: ^8.33.1
         version: 8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3)
 
   packages/typescript-config: {}
@@ -247,10 +247,10 @@ importers:
         specifier: ^22.15.30
         version: 22.15.30
       '@types/react':
-        specifier: ^19
+        specifier: ^19.0.14
         version: 19.1.6
       '@types/react-dom':
-        specifier: ^19
+        specifier: ^19.0.6
         version: 19.1.6(@types/react@19.1.6)
       '@workspace/eslint-config':
         specifier: workspace:*
@@ -262,7 +262,7 @@ importers:
         specifier: ^4.0.8
         version: 4.1.8
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
 
 packages:
