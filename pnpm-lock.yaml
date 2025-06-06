@@ -104,7 +104,7 @@ importers:
         version: 1.0.12(hardhat@2.24.2(bufferutil@4.0.9)(ts-node@10.9.2(@types/node@22.15.30)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
       '@nomicfoundation/hardhat-toolbox':
         specifier: ^5.0.0
-        version: 5.0.0(34661e0c27d52414f69cd2835c0b3b08)
+        version: 5.0.0(656b56e212034ae76d09c6d92d96bcb8)
       '@nomicfoundation/hardhat-verify':
         specifier: ^2.0.14
         version: 2.0.14(hardhat@2.24.2(bufferutil@4.0.9)(ts-node@10.9.2(@types/node@22.15.30)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
@@ -115,8 +115,8 @@ importers:
         specifier: ^9.1.0
         version: 9.1.0(@typechain/ethers-v6@0.5.1(ethers@6.14.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(typechain@8.3.2(typescript@5.8.3))(typescript@5.8.3))(ethers@6.14.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(hardhat@2.24.2(bufferutil@4.0.9)(ts-node@10.9.2(@types/node@22.15.30)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))(typechain@8.3.2(typescript@5.8.3))
       '@types/chai':
-        specifier: ^4.3.20
-        version: 4.3.20
+        specifier: ^5.2.2
+        version: 5.2.2
       '@types/mocha':
         specifier: ^10.0.10
         version: 10.0.10
@@ -1541,14 +1541,17 @@ packages:
   '@types/chai-as-promised@7.1.8':
     resolution: {integrity: sha512-ThlRVIJhr69FLlh6IctTXFkmhtP3NpMZ2QGq69StYLyKZFp/HOp1VdKZj7RvfNWYYcJ1xlbLGLLWj1UvP5u/Gw==}
 
-  '@types/chai@4.3.20':
-    resolution: {integrity: sha512-/pC9HAB5I/xMlc5FP77qjCnI16ChlJfW0tGa0IUcFn38VJrTV6DeZ60NU5KZBtaOZqjdpwTWohz5HU1RrhiYxQ==}
+  '@types/chai@5.2.2':
+    resolution: {integrity: sha512-8kB30R7Hwqf40JPiKhVzodJs2Qc1ZJ5zuT3uzw5Hq/dhNCl3G3l83jfpdI1e20BP348+fV7VIL/+FxaXkqBmWg==}
 
   '@types/concat-stream@1.6.1':
     resolution: {integrity: sha512-eHE4cQPoj6ngxBZMvVf6Hw7Mh4jMW4U9lpGmS5GBPB9RYxlFg+CHaVN7ErNY4W9XfLIEn20b4VDYaIrbq0q4uA==}
 
   '@types/debug@4.1.12':
     resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
+
+  '@types/deep-eql@4.0.2':
+    resolution: {integrity: sha512-c9h9dVVMigMPc4bwTvC5dxqtqJZwQPePsWjPlpSOnojbor6pGqdk541lfA7AqFQr5pB1BRdq0juY9db81BwyFw==}
 
   '@types/estree@1.0.7':
     resolution: {integrity: sha512-w28IoSUCJpidD/TGviZwwMJckNESJZXFu7NBZ5YJ4mEUnNraUn9Pm8HSZm/jDF1pDWYKspWE7oVphigUPRakIQ==}
@@ -6271,7 +6274,7 @@ snapshots:
       ethereumjs-util: 7.1.5
       hardhat: 2.24.2(bufferutil@4.0.9)(ts-node@10.9.2(@types/node@22.15.30)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10)
 
-  '@nomicfoundation/hardhat-toolbox@5.0.0(34661e0c27d52414f69cd2835c0b3b08)':
+  '@nomicfoundation/hardhat-toolbox@5.0.0(656b56e212034ae76d09c6d92d96bcb8)':
     dependencies:
       '@nomicfoundation/hardhat-chai-matchers': 2.0.8(@nomicfoundation/hardhat-ethers@3.0.8(ethers@6.14.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(hardhat@2.24.2(bufferutil@4.0.9)(ts-node@10.9.2(@types/node@22.15.30)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10)))(chai@4.5.0)(ethers@6.14.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(hardhat@2.24.2(bufferutil@4.0.9)(ts-node@10.9.2(@types/node@22.15.30)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
       '@nomicfoundation/hardhat-ethers': 3.0.8(ethers@6.14.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(hardhat@2.24.2(bufferutil@4.0.9)(ts-node@10.9.2(@types/node@22.15.30)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
@@ -6280,7 +6283,7 @@ snapshots:
       '@nomicfoundation/hardhat-verify': 2.0.14(hardhat@2.24.2(bufferutil@4.0.9)(ts-node@10.9.2(@types/node@22.15.30)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
       '@typechain/ethers-v6': 0.5.1(ethers@6.14.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(typechain@8.3.2(typescript@5.8.3))(typescript@5.8.3)
       '@typechain/hardhat': 9.1.0(@typechain/ethers-v6@0.5.1(ethers@6.14.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(typechain@8.3.2(typescript@5.8.3))(typescript@5.8.3))(ethers@6.14.3(bufferutil@4.0.9)(utf-8-validate@5.0.10))(hardhat@2.24.2(bufferutil@4.0.9)(ts-node@10.9.2(@types/node@22.15.30)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))(typechain@8.3.2(typescript@5.8.3))
-      '@types/chai': 4.3.20
+      '@types/chai': 5.2.2
       '@types/mocha': 10.0.10
       '@types/node': 22.15.30
       chai: 4.5.0
@@ -7187,9 +7190,11 @@ snapshots:
 
   '@types/chai-as-promised@7.1.8':
     dependencies:
-      '@types/chai': 4.3.20
+      '@types/chai': 5.2.2
 
-  '@types/chai@4.3.20': {}
+  '@types/chai@5.2.2':
+    dependencies:
+      '@types/deep-eql': 4.0.2
 
   '@types/concat-stream@1.6.1':
     dependencies:
@@ -7198,6 +7203,8 @@ snapshots:
   '@types/debug@4.1.12':
     dependencies:
       '@types/ms': 2.1.0
+
+  '@types/deep-eql@4.0.2': {}
 
   '@types/estree@1.0.7': {}
 
