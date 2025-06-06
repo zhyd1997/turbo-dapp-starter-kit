@@ -21,10 +21,10 @@ importers:
         specifier: ^16.1.0
         version: 16.1.0
       prettier:
-        specifier: ^3.5.1
+        specifier: ^3.5.3
         version: 3.5.3
       turbo:
-        specifier: ^2.4.2
+        specifier: ^2.4.4
         version: 2.5.4
       typescript:
         specifier: 5.8.3
@@ -238,7 +238,7 @@ importers:
         version: 3.25.53
     devDependencies:
       '@tailwindcss/postcss':
-        specifier: ^4.0.8
+        specifier: ^4.0.17
         version: 4.1.8
       '@turbo/gen':
         specifier: ^2.5.4
@@ -259,7 +259,7 @@ importers:
         specifier: workspace:*
         version: link:../typescript-config
       tailwindcss:
-        specifier: ^4.0.8
+        specifier: ^4.0.17
         version: 4.1.8
       typescript:
         specifier: ^5.8.3
