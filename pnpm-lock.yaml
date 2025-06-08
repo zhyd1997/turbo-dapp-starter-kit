@@ -38,6 +38,9 @@ importers:
       '@tanstack/react-query':
         specifier: ^5.80.6
         version: 5.80.6(react@19.1.0)
+      '@workspace/contracts':
+        specifier: workspace:*
+        version: link:../../packages/contracts
       '@workspace/ui':
         specifier: workspace:*
         version: link:../../packages/ui
