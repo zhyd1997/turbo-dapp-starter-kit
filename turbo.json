@@ -19,7 +19,7 @@
       "persistent": true
     },
     "compile": {
-      "cache": true
+      "cache": false
     }
   }
 }
