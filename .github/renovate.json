@@ -10,31 +10,53 @@
     {
       "description": "Group React ecosystem updates",
       "groupName": "React ecosystem",
-      "matchPackageNames": ["react", "react-dom", "/^@types\\/react/"],
+      "matchPackageNames": [
+        "react",
+        "react-dom",
+        "/^@types\\/react/"
+      ],
       "automerge": false,
-      "schedule": ["before 10am on monday"]
+      "schedule": [
+        "before 10am on monday"
+      ]
     },
     {
       "description": "Group Next.js updates",
       "groupName": "Next.js",
-      "matchPackageNames": ["next", "/^eslint-config-next/"],
+      "matchPackageNames": [
+        "next",
+        "/^eslint-config-next/"
+      ],
       "automerge": false,
-      "schedule": ["before 10am on monday"]
+      "schedule": [
+        "before 10am on monday"
+      ]
     },
     {
       "description": "Group Web3 updates",
       "groupName": "Web3",
-      "matchPackageNames": ["^@rainbow-me/", "^wagmi$", "^viem$"],
+      "matchPackageNames": [
+        "^@rainbow-me/",
+        "^wagmi$",
+        "^viem$"
+      ],
       "automerge": false,
-      "schedule": ["before 10am on monday"]
+      "schedule": [
+        "before 10am on monday"
+      ]
     },
     {
       "description": "Group Hardhat updates",
       "groupName": "Hardhat",
-      "matchPackageNames": ["^hardhat$", "^@nomicfoundation/"],
+      "matchPackageNames": [
+        "^hardhat$",
+        "^@nomicfoundation/"
+      ],
       "automerge": true,
       "automergeType": "pr",
-      "schedule": ["before 10am on monday"]
+      "schedule": [
+        "before 10am on monday"
+      ]
     },
     {
       "description": "Group TypeScript ecosystem",
@@ -42,24 +64,30 @@
       "matchPackageNames": [
         "typescript",
         "/^@types\\//",
-        "/^typescript-eslint/"
-      ],
-      "excludePackageNames": [
-        "@types/chai",
-        "@types/react",
-        "@types/react-dom"
+        "/^typescript-eslint/",
+        "!@types/chai",
+        "!@types/react",
+        "!@types/react-dom"
       ],
       "automerge": true,
       "automergeType": "pr",
-      "schedule": ["before 10am on monday"]
+      "schedule": [
+        "before 10am on monday"
+      ]
     },
     {
       "description": "Group ESLint ecosystem",
       "groupName": "ESLint",
-      "matchPackageNames": ["eslint", "/^eslint-/", "/^@eslint\\//"],
+      "matchPackageNames": [
+        "eslint",
+        "/^eslint-/",
+        "/^@eslint\\//"
+      ],
       "automerge": true,
       "automergeType": "pr",
-      "schedule": ["before 10am on monday"]
+      "schedule": [
+        "before 10am on monday"
+      ]
     },
     {
       "description": "Group build tools",
@@ -72,7 +100,9 @@
       ],
       "automerge": true,
       "automergeType": "pr",
-      "schedule": ["before 10am on monday"]
+      "schedule": [
+        "before 10am on monday"
+      ]
     },
     {
       "description": "Auto-merge patch and minor updates for utility packages",
@@ -85,31 +115,51 @@
       ],
       "automerge": true,
       "automergeType": "pr",
-      "matchUpdateTypes": ["patch", "minor"]
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ]
     },
     {
       "description": "Group Chai updates",
       "groupName": "Chai",
-      "matchPackageNames": ["chai", "@types/chai"],
+      "matchPackageNames": [
+        "chai",
+        "@types/chai"
+      ],
       "automerge": true,
       "automergeType": "pr",
-      "schedule": ["before 10am on monday"]
+      "schedule": [
+        "before 10am on monday"
+      ]
     }
   ],
-  "schedule": ["before 10am on monday"],
+  "schedule": [
+    "before 10am on monday"
+  ],
   "timezone": "UTC",
-  "labels": ["dependencies"],
-  "assignees": ["zhyd1997"],
-  "reviewers": ["zhyd1997"],
+  "labels": [
+    "dependencies"
+  ],
+  "assignees": [
+    "zhyd1997"
+  ],
+  "reviewers": [
+    "zhyd1997"
+  ],
   "prConcurrentLimit": 10,
   "prHourlyLimit": 2,
   "commitMessagePrefix": "chore(deps):",
   "commitMessageAction": "update",
   "commitMessageTopic": "{{depName}}",
   "commitMessageExtra": "to {{newVersion}}",
-  "postUpdateOptions": ["pnpmDedupe"],
+  "postUpdateOptions": [
+    "pnpmDedupe"
+  ],
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["before 10am on monday"]
+    "schedule": [
+      "before 10am on monday"
+    ]
   }
 }
