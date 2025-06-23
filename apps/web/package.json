@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@rainbow-me/rainbowkit": "^2.2.8",
-    "@tanstack/react-query": "^5.80.12",
+    "@tanstack/react-query": "^5.81.2",
     "@workspace/contracts": "workspace:*",
     "@workspace/ui": "workspace:*",
     "lucide-react": "^0.515.0",
